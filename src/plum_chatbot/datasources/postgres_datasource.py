@@ -1,10 +1,11 @@
-from plum_chatbot.datasources.base_datasource import BaseDatasource
-from sqlalchemy import create_engine, Engine, text
+from sqlalchemy import Engine, create_engine, text
+from sqlalchemy.engine.cursor import CursorResult
 from sqlalchemy.ext.declarative import declarative_base
-from plum_chatbot.datasources.parameters import PostgresParameters
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from sqlalchemy.engine.cursor import CursorResult
+
+from plum_chatbot.datasources.base_datasource import BaseDatasource
+from plum_chatbot.datasources.parameters import PostgresParameters
 
 BaseTable = declarative_base(name="BaseTable")
 

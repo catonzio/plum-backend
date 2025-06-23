@@ -1,5 +1,6 @@
 import logging
 import os
+
 from plum_chatbot.configs.folders import LOGS_DIR
 
 

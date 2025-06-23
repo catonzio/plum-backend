@@ -1,6 +1,7 @@
 import json
-import requests as req
 from uuid import uuid4
+
+import requests as req
 
 url = "http://0.0.0.0:8000/"
 

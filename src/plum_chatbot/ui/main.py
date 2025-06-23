@@ -1,13 +1,14 @@
-from fastapi import FastAPI
-import gradio as gr
 import logging
+
+import gradio as gr
+from fastapi import FastAPI
 
 from plum_chatbot.agents.agents import invoke_chatbot
 from plum_chatbot.configs.settings import Settings
 from plum_chatbot.datasources.base_datasource import BaseDatasource
+from plum_chatbot.datasources.models.chat_message import ChatMessage as DBChatMessage
 from plum_chatbot.di_containers.datasources_containers import Container, container
 from plum_chatbot.schemas.schema import ChatMessage, UserInput
-from plum_chatbot.datasources.models.chat_message import ChatMessage as DBChatMessage
 
 logger = logging.getLogger(__name__)
 

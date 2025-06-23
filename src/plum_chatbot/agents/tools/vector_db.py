@@ -1,21 +1,22 @@
-from plum_chatbot.di_containers.datasources_containers import Container
 from langchain_core.tools import tool
+
+from plum_chatbot.di_containers.datasources_containers import Container
 
 
 @tool
-def query_vector_db(query: str, limit: int | None = 3) -> tuple[str, list]:
+def query_vector_db(query: str, limit: int | str | None = 5) -> tuple[str, list]:
     """
     Tool to query the PLUM vector database.
     This tool uses the QdrantDatasource to perform similarity searches.
     Use this only when you need to retrieve information from the vector database, not for general queries.
-    
+
     Args:
         query (str): The query string to search for in the vector database.
-        limit (int, optional): The maximum number of results to return. Defaults to 3.
+        limit (int, optional): The maximum number of results to return. Defaults to 5.
     Returns:
         tuple: A tuple containing the serialized results and the retrieved documents.
     """
-    limit = limit or 3
+    limit = int(limit or 5)
     datasource = Container.qdrant()
     if datasource is None:
         raise ValueError("QdrantDatasource is not available in the container.")

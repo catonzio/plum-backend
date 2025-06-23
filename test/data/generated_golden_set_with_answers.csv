@@ -1,0 +1,199 @@
+id,question,real_answer,content_used,llm_answer
+0,Come posso configurare una nuova email ordinaria nello studio tramite il portale?,"Per configurare una nuova email ordinaria all'interno del portale, accedi al menu principale e seleziona Configurazioni -> Parametri Email. Clicca sul simbolo '+' per inserire una nuova configurazione. Compila i campi richiesti: 'Descrizione' per identificare l'email, 'Tipo' selezionando 'ORDINARIA', 'Indirizzo' con l'email da configurare, 'Host' scegliendolo dall'elenco dei provider disponibili (se non presente, contattare l’assistenza PLUM), 'Username' che solitamente coincide con l'indirizzo email, e 'Password'. Puoi anche indicare un indirizzo di inoltro per conoscenza se desideri ricevere copie delle email inviate. Infine, salva la configurazione.",COME CONFIGUARE LE EMAIL E LA PEC,"Per configurare una nuova email ordinaria nello studio tramite il portale Plum, segui questi passaggi:
+
+1. Accedi al portale Plum come amministratore del condominio.
+2. Vai alla sezione ""Impostazioni"" e seleziona ""Email"".
+3. Clicca su ""Nuova email"" per creare una nuova email ordinaria.
+4. Inserisci l'indirizzo email destinatario e oggetto della mail.
+5. Scrivi il corpo della mail.
+6. Se necessario, aggiungi allegati alla mail.
+7. Clicca su ""Invia"" per inviare la mail.
+
+In alternativa, puoi anche utilizzare il modulo di email predefinito presente nel portale Plum per creare una nuova email ordinaria. Per farlo:
+
+1. Accedi al portale Plum come amministratore del condominio.
+2. Vai alla sezione ""Moduli"" e seleziona ""Email"".
+3. Clicca su ""Usa modulo di email predefinito"" e scegli il modulo desiderato (ad esempio, ""Ordinary Email"").
+4. Inserisci l'indirizzo email destinatario e oggetto della mail.
+5. Scrivi il corpo della mail.
+6. Se necessario, aggiungi allegati alla mail.
+7. Clicca su ""Invia"" per inviare la mail.
+
+Ricorda di controllare regolarmente le impostazioni della tua email per assicurarti che funzionino correttamente."
+1,"Non trovo la configurazione dell'email, mi aiuti?","Per configurare l'email accedi al portale e vai su Configurazioni -> Parametri Email. Da lì premi il simbolo '+' per inserire i parametri richiesti come indirizzo, password, host, e altri. Se il tuo provider non è nell'elenco, contatta l'assistenza PLUM. Una volta completati i campi, salva la configurazione.",COME CONFIGUARE LE EMAIL E LA PEC,"Per configurare l'email su Plum, segui questi passaggi:
+
+1. Accedi al portale Plum e seleziona il tuo condominio.
+2. Vai alla sezione ""Impostazioni"" e seleziona ""Configurazione email"".
+3. Inserisci l'indirizzo email che desideri utilizzare per ricevere le notifiche e i messaggi.
+4. Seleziona il servizio di posta elettronica che desideri utilizzare (ad esempio, Gmail, Outlook ecc.).
+5. Inserisci le credenziali di accesso al servizio di posta elettronica selezionato.
+6. Salva le tue impostazioni.
+
+Inoltre, assicurati di configurare anche la PEC (Posta Elettronica Certificata) se desideri utilizzare questo servizio per ricevere notifiche ufficiali.
+
+Se hai difficoltà nella configurazione dell'email o della PEC, puoi consultare i documenti ufficiali del condominio o contattare l'amministrazione del condominio per avere ulteriore assistenza."
+2,Cosa fa esattamente il servizio TurboSMTP?,"Il servizio TurboSMTP è un'alternativa all'invio di email tramite il proprio provider. Questo servizio garantisce una percentuale di consegna superiore al 99,7% e fornisce dettagli su data, ora di invio ed eventuali esiti negativi. Per attivarlo, è necessario selezionare l'opzione 'su questo account intendo utilizzare il servizio turboSMTP'. È anche possibile ricevere una copia dell'email su un altro indirizzo attivando il relativo campo e inserendo l'indirizzo nel campo 'Mail inoltro per conoscenza'.",COME CONFIGUARE LE EMAIL E LA PEC,"Il servizio TurboSMTP è una funzionalità del portale Plum che consente agli amministratori di condominio di inviare email e documenti digitali in modo rapido e efficiente. Con TurboSMTP, gli utenti possono creare e inviare email personalizzate con un semplice click, senza dover conoscere i dettagli tecnici dell'invio di email.
+
+TurboSMTP offre diverse funzionalità utili, tra cui:
+
+*   La possibilità di creare email personalizzate con un modello predefinito
+*   L'integrazione con il sistema di pagamento digitali del portale Plum
+*   La possibilità di inviare documenti digitali come ad esempio i bollettini e i MAV
+
+In sintesi, TurboSMTP è uno strumento utile per gli amministratori di condominio che desiderano inviare email e documenti digitali in modo rapido e efficiente, senza dover conoscere i dettagli tecnici dell'invio di email."
+3,Dove si inseriscono le coordinate delle buste da lettere?,"Per inserire le coordinate delle buste da lettere, accedi al menu Configurazioni -> Parametri Buste da Lettere. Nella finestra che si apre puoi specificare le coordinate per i diversi formati disponibili (Americano, Medio, Grande). Dopo aver completato i campi, premi sul simbolo del dischetto per memorizzare le coordinate.",COME INSERIRE LE COORDINATE DELLA BUSTA DA LETTERE,"Per inserire le coordinate delle buste da lettere sul portale Plum, segui questi passaggi:
+
+1. Accedi al tuo account sul portale Plum.
+2. Seleziona la sezione ""Spedizione"" e clicca su ""Gestione spedizioni"".
+3. Clicca su ""Aggiungi nuovo mittente"" e inserisci i dati del mittente, comprese le sue coordinate.
+4. Per inserire le coordinate delle buste da lettere, clicca su ""Aggiungi elemento"" e seleziona ""Coordinate della busta"".
+5. Inserisci le coordinate x e y della busta e clicca su ""Salva"".
+
+In alternativa, puoi anche inserire le coordinate delle buste da lettere quando si crea un nuovo mittente. Per farlo, segui questi passaggi:
+
+1. Accedi al tuo account sul portale Plum.
+2. Seleziona la sezione ""Spedizione"" e clicca su ""Gestione spedizioni"".
+3. Clicca su ""Aggiungi nuovo mittente"" e inserisci i dati del mittente, comprese le sue coordinate.
+4. Inserisci le coordinate x e y della busta e clicca su ""Salva"".
+
+In entrambi i casi, le coordinate delle buste da lettere saranno memorizzate nel portale Plum e potrai utilizzarle per la gestione delle spedizioni."
+4,C'e' un modo per usare la Dymo per stampare le etichette?,"Sì, la piattaforma permette di stampare le etichette anche con la Dymo. Devi selezionare il formato a 1 pista, che corrisponde a una singola etichetta per riga. L’inserimento delle coordinate avviene tramite il menu Configurazioni -> Parametri Etichette. Da lì compila i campi e premi il simbolo del dischetto per salvare le impostazioni.",COME INSERIRE LE COORDINATE DELLE ETICHETTE,"Gentile utente, per stampare le etichette utilizzando la DYMO tramite il portale Plum, è necessario seguire alcuni passaggi.
+
+1. Assicurarsi di avere l'accesso al modulo DYMO nel portale Plum.
+2. Selezionare il modulo DYMO nell'area di lavoro e cliccare su ""Impostazioni"".
+3. Configurare le impostazioni del modulo DYMO, come ad esempio la velocità di stampa e il tipo di etichetta da utilizzare.
+4. Cliccare su ""Testo"" e inserire i dettagli dell'etichetta che si desidera stampare.
+5. Cliccare su ""Stampa"" per iniziare la stampa dell'etichetta.
+
+Per stampare un documento specifico, ad esempio una lista di spese, è possibile utilizzare il modulo DYMO in combinazione con il modulo PDF.
+
+1. Selezionare il modulo DYMO nell'area di lavoro e cliccare su ""Impostazioni"".
+2. Configurare le impostazioni del modulo DYMO.
+3. Cliccare su ""File"" e selezionare il documento da stampare (ad esempio un elenco delle spese).
+4. Cliccare su ""Stampa"" per iniziare la stampa dell'etichetta con i dettagli del documento.
+
+Per ulteriori informazioni sulle impostazioni del modulo DYMO e sulla stampa di documenti specifici, è possibile consultare il manuale utente del portale Plum o contattare l'amministrazione del condominio."
+5,"Che differenza c'e' tra le 1, 2 e 3 piste delle etichette?","Le piste rappresentano il numero di etichette affiancate su una riga. 1 pista indica una sola etichetta per riga (es. formato Dymo), 2 piste due etichette per riga, e 3 piste tre etichette. Questa configurazione consente di adattare la stampa al layout dei fogli di etichette utilizzati.",COME INSERIRE LE COORDINATE DELLE ETICHETTE,"Le etichette ""1"", ""2"" e ""3"" si riferiscono alle piste di un documentario che tratta del tema dei documenti digitali e della loro importanza per gli amministratori di condominio nel gestionale Lemon.
+
+La prima pista, indicata come ""11. COME GENERARE I MAV"", si occupa di spiegare come generare i MAV (Moduli di Attività Verbale) utilizzando il gestionale Lemon. Questo documentario è stato realizzato in collaborazione con la società che fornisce il software e serve a guidare gli amministratori nella creazione dei MAV in modo corretto e completo.
+
+La seconda pista, indicata come ""10. COME GENERARE I BOLLETTINI TD 896 O TD 123"", si concentra sulla generazione dei bollettini di pagamento per le spese relative alle attività di gestione del condominio. Questo documentario fornisce istruzioni dettagliate su come utilizzare il gestionale Lemon per creare e inviare questi documenti.
+
+La terza pista, indicata come ""9. COSA SONO I DOCUMENTI DIGITALI E COME ACQUISTARLI"", si occupa di presentare l'importanza dei documenti digitali nel contesto del gestionale Lemon. Questo documentario spiega cosa sono i documenti digitali, come possono essere utilizzati per migliorare la gestione del condominio e come acquistarli.
+
+Infine, la quarta pista, indicata come ""7. COME IMPOSTARE I DATI PER LA SPEDIZIONE"", fornisce istruzioni su come impostare i dati per la spedizione dei documenti digitali utilizzando il gestionale Lemon.
+
+In sintesi, le tre piste offrono una guida dettagliata sugli aspetti principali della generazione e del uso dei documenti digitali nel contesto del gestionale Lemon."
+6,Come posso configurare un bollettino 123?,"Per configurare i bollettini 123 accedi al menu principale, vai su Configurazioni -> Parametri Bollettino 123. Si apre una finestra in cui inserire i parametri, simili a quelli delle email. Dopo aver compilato tutti i campi (descrizione, tipo, indirizzo, host, username, password, ecc.), premi il pulsante SALVA per memorizzare le informazioni.",COME IMPOSTARE LE COORDINATE DEI BOLLETTINI 123,"Per configurare un bollettino 123 in Plum, puoi seguire questi passaggi:
+
+1. **Accedi al portale Plum**: Inizia per quanto riguarda l'accesso al portale Plum.
+2. **Seleziona la sezione ""Bollettini""**: Una volta acceduto, seleziona la sezione ""Bollettini"" dal menu a sinistra.
+3. **Clicca su ""Nuovo bollettino""**: Nella sezione ""Bollettini"", clicca sul pulsante ""Nuovo bollettino"" per creare un nuovo bollettino.
+4. **Scegli il tipo di bollettino**: Scegli il tipo di bollettino che desideri creare, ad esempio ""Bollettino 123"".
+5. **Inserisci le informazioni necessarie**: Inserisci le informazioni necessarie per il bollettino, come ad esempio la data, l'oggetto e il testo del bollettino.
+6. **Salva e pubblica il bollettino**: Una volta inserite tutte le informazioni necessarie, salva e pubblica il bollettino.
+
+Inoltre, per configurare correttamente un bollettino 123, è importante:
+
+* Assicurarsi di aver configurato correttamente l'email e la PEC;
+* Verificare che le impostazioni del portale Plum siano state configurate correttamente;
+
+Se hai difficoltà nella configurazione di un bollettino 123, ti consiglio di consultare il manuale d'istruzioni del portale Plum o di contattare l'amministrazione del condominio per chiedere assistenza."
+7,Dove si salvano i testi personalizzati per le email?,"I testi personalizzati si configurano dal menu Configurazioni -> Testi personalizzati. Dopo aver cliccato sul pulsante '+' nella parte superiore della finestra, puoi selezionare il riferimento (es. Email), inserire un titolo e il contenuto del testo. Questo testo potrà poi essere richiamato durante l’invio di email, pec o solleciti.",COME CONFIGUARE I TESTI PERSONALIZZATI,"Per salvare i testi personalizzati per le email nel portale Plum, segui questi passaggi:
+
+1. Accedi al pannello di controllo del portale Plum.
+2. Seleziona l'opzione ""Email"" e poi clicca su ""Testi personalizzati"".
+3. Clicca sul pulsante ""+"" per aggiungere un nuovo testo personalizzato.
+4. Inserisci il testo desiderato nel campo di testo disponibile.
+5. Clicca su ""Salva"" per salvare il testo personalizzato.
+
+In alternativa, puoi anche configurare i testi personalizzati nella sezione ""Impostazioni"" del portale Plum. Per farlo:
+
+1. Accedi al pannello di controllo del portale Plum.
+2. Seleziona l'opzione ""Impostazioni"".
+3. Nella sezione ""Email"", clicca su ""Testi personalizzati"" e poi seleziona l'opzione ""Configura testi personalizzati"".
+4. Inserisci il testo desiderato nel campo di testo disponibile.
+5. Clicca su ""Salva"" per salvare i testi personalizzati.
+
+Ricorda di ripristinare le impostazioni predefinite se non sei sicuro dei cambiamenti apportati."
+8,Posso scrivere testi diversi per ogni sollecito?,"Sì, la piattaforma permette di impostare testi differenti per ciascun destinatario nei solleciti. È possibile associare testi personalizzati a ogni invio selezionando 'Sollecito' nel menu Configurazioni -> Testi personalizzati. Così puoi differenziare il contenuto per ogni destinatario invece di inviare lo stesso testo a tutti.",COME CONFIGUARE I TESTI PERSONALIZZATI,"No, non è possibile scrivere testi diversi per ogni sollecito. Il portale Plum è progettato per gestire una serie di domande e richieste comuni degli amministratori di condominio, e i testi sono già stati redatti per coprire le principali questioni.
+
+Tuttavia, se hai una domanda specifica o un problema particolare che non è stato coperto dai testi esistenti, puoi contattarci tramite il portale Plum e chiedere aiuto. Siamo qui per aiutarti!"
+9,Come cambio i dati del mittente sulle buste?,"Per modificare i dati del mittente da stampare sulle buste, vai su Configurazioni -> Dati Mittente. Da lì puoi scegliere se usare i dati dell’Amministratore, del Condominio o dello Studio. Dopo aver inserito i dati, seleziona il mittente predefinito. Durante l'invio, i dati verranno usati automaticamente, ma puoi comunque modificarli prima della spedizione.",COME IMPOSTARE I DATI DEL MITTENTE,"Per cambiare i dati del mittente sulle buste, è necessario seguire questi passaggi:
+
+1. Accedere al portale Plum e selezionare la sezione ""Impostazioni"" o ""Gestione condominio"".
+2. Nella sezione ""Impostazioni"", cercare la voce ""Spedizione"" o ""Mittente"" e selezionarla.
+3. Nella voce ""Mittente"", trovare l'opzione ""Cambiare dati del mittente"" e selezionarla.
+4. Scegliere il tipo di cambio dei dati (ad esempio, aggiornamento del nome, cognome o indirizzo).
+5. Inserire i nuovi dati e confermare la modifica.
+
+Nota: I passaggi esatti potrebbero variare in base alle configurazioni e impostazioni del portale Plum specifico che stai utilizzando."
+10,Come faccio a spedire un sollecito via posta ordinaria?,"La piattaforma PLUM ti consente di inviare documenti (come solleciti) anche tramite posta ordinaria. I dati arrivano dal portale Lemon attraverso il pulsante PLUM presente nella finestra dei solleciti. Una volta dentro PLUM, nella sezione SPEDIZIONI trovi i destinatari e i documenti allegati. Compila il campo CONTENUTO per descrivere la spedizione. I dati del mittente sono presi da quelli predefiniti ma puoi modificarli prima dell’invio.",COME IMPOSTARE I DATI PER LA SPEDIZIONE,"Per spedire un sollecito via posta ordinaria, puoi seguire questi passaggi:
+
+1. **Preparazione del sollecito**: Assicurati di avere il testo del sollecito e qualsiasi altro documento necessario.
+2. **Acquisto della busta**: Puoi acquistare buste per la posta ordinaria presso una banca, un negozio di corrieri o online.
+3. **Riempiere la busta**: Riempi la busta con il testo del sollecito e qualsiasi altro documento necessario.
+4. **Apposizione dello stampello**: Apponi lo stampello dell'ufficio postale sulla busta per indicare che è una lettera ufficiale.
+5. **Peso e pagamento**: Pesa la busta e paga il prezzo di spedizione presso l'ufficio postale o online.
+6. **Consegna**: La busta verrà consegnata a un corrierino che la porterà alla destinazione.
+
+In alternativa, puoi anche utilizzare i servizi di corriere espressi come DHL, UPS o FedEx per spedire il sollecito. Questi servizi offrono una consegna più rapida e affidabile rispetto alla posta ordinaria.
+
+È importante notare che, in Italia, è possibile spedire documenti ufficiali anche tramite la posta certificata, che offre un livello di sicurezza e tracciabilità superiore rispetto alla posta ordinaria."
+11,Come si aggiornano i miei dati personali?,"Per aggiornare i tuoi dati personali, dalla pagina iniziale premi il pulsante Profilo. Verrà visualizzata una finestra dove l’amministratore può modificare i propri dati. Dopo aver effettuato le modifiche, è fondamentale premere il pulsante SALVA per applicare i cambiamenti.",COME MODIFICA I DATI DEL PROFILO,"Per aggiornare i tuoi dati personali sul portale Plum, segui questi passaggi:
+
+1. Accedi al tuo account sul portale Plum.
+2. Clicca sul tuo profilo in alto a destra e seleziona ""Aggiorna dati personali"".
+3. Riempi i campi con le informazioni corrette e aggiornate.
+4. Assicurati di confermare le tue informazioni prima di salvare.
+
+In alternativa, puoi anche contattare l'amministrazione del condominio per richiedere l'aiuto per aggiornare i tuoi dati personali.
+
+Se hai problemi o domande durante il processo di aggiornamento, non esitare a contattarci."
+12,Quanto costano i documenti digitali e come si comprano?,"I documenti digitali costano 0,30 euro + IVA ciascuno e si acquistano dalla pagina ORDINI. Dopo aver cliccato su '+', inserisci la quantità desiderata e i dati per la fattura. Premi SALVA, poi conferma l’ordine premendo il carrello verde e la stampante blu. Dopo il pagamento, i documenti vengono accreditati automaticamente sul contatore visibile nella pagina iniziale o in Estratto Conto.",COSA SONO I DOCUMENTI DIGITALI E COME ACQUISTARLI,"Gli documenti digitali possono essere acquistati attraverso il portale Plum, che è lo strumento di comunicazione ufficiale del gestionale Lemon. Per acquistare un documento digitale, segui questi passaggi:
+
+1. Accedi al portale Plum e seleziona la sezione ""Documenti digitali"".
+2. Scegli il tipo di documento che desideri acquistare (ad esempio, MAV, bolletino, ecc.).
+3. Seleziona la data e l'orario di rilascio del documento.
+4. Inserisci i dati del mittente e conferma l'ordine.
+5. Il documento digitale sarà disponibile per scaricare nell'area riservata del portale Plum.
+
+Il prezzo dei documenti digitali varia in base al tipo e alla data di rilascio. Non è stato possibile trovare informazioni precise sul prezzo dei singoli documenti, ma si consiglia di controllare il sito ufficiale del portale Plum per avere le informazioni più aggiornate.
+
+Inoltre, è importante notare che i documenti digitali possono essere acquistati solo se si ha un account attivo nel portale Plum e si sono soddisfatti delle condizioni di utenti."
+13,Ho finito i crediti per i documenti digitali. Come faccio?,"Accedi alla pagina ORDINI, premi '+', specifica la quantità di documenti digitali da acquistare e inserisci i dati fiscali. Dopo aver premuto SALVA, conferma l’ordine tramite il carrello verde e poi stampa il bollettino 896. Una volta pagato, il sistema accredita automaticamente i nuovi crediti aggiornando il contatore.",COSA SONO I DOCUMENTI DIGITALI E COME ACQUISTARLI,"Per risolvere il problema dei crediti documentali mancanti, segui questi passaggi:
+
+1.  Accedi al portale Plum e seleziona la sezione ""Documenti digitali"".
+2.  Clicca su ""Credits"" nella parte superiore della pagina.
+3.  Se i crediti sono esauriti, clicca su ""Rinnovi crediti"" e segui le istruzioni per rinnovare i crediti.
+4.  Se non hai più crediti disponibili, contatta l'amministrazione del condominio o un rappresentante autorizzato per chiedere informazioni aggiornate.
+
+Per ulteriori informazioni, puoi consultare il documento ""9. COSA SONO I DOCUMENTI DIGITALI E COME ACQUISTARLI.pdf"" e ""10. COME GENERARE I BOLLETTINI TD 896 O TD 123.pdf"" all'interno del portale Plum."
+14,Come genero i bollettini TD 123 da Lemon?,"Accedi a Lemon, seleziona il condominio, poi vai su Comunicazioni -> Avvisi-Bollettini-Mav e scegli Bollettini postali TD 123 Matrice. Dopo aver selezionato le rate, compila i campi e premi STAMPA per la prova. Se tutto e' corretto, togli la spunta 'stampa di prova' per abilitare il pulsante PLUM. I dati verranno trasferiti a PLUM, dove potrai procedere con la spedizione.",COME GENERARE I BOLLETTINI POSTALI TD 896 O TD 123,"Per generare i bollettini TD 123 in Lemon, è necessario seguire i passaggi descritti nel documento ""10. COME GENERARE I BOLLETTINI TD 896 O TD 123.pdf"". 
+
+In particolare, per generare i bollettini TD 123, è necessario:
+
+1. Accedere al portale Plum;
+2. Selezionare la sezione relative ai pagamenti e alle fatture;
+3. Cliccare sul pulsante ""Genera bolletto"";
+4. Scegliere il tipo di bolletto (in questo caso TD 123);
+5. Inserire i parametri necessari, come ad esempio la data di scadenza e l'importo;
+6. Cliccare su ""Invia"" per generare il bolletto.
+
+In alternativa, è possibile utilizzare il modulo predefinito per i bollettini TD 123, che può essere trovato nella sezione relative ai documenti digitali. 
+
+Per utilizzare correttamente questo modulo, è necessario seguire le istruzioni fornite nel documento ""4. COME INSERIRE I PARAMETRI DEI BOLLETTINI 123.pdf""."
+15,Perche' non vedo il pulsante PLUM attivo?,"Il pulsante PLUM rimane disattivato finche' la spunta 'Attenzione, stampa di prova ...' e' attiva. Una volta verificati i dati nella stampa di prova, rimuovi la spunta per abilitare il pulsante PLUM e trasferire i dati alla piattaforma PLUM.",COME GENERARE I BOLLETTINI POSTALI TD 896 O TD 123,"Per vedere il pulsante ""PLUM"" attivo, è possibile che ci siano alcune configurazioni o impostazioni da verificare.
+
+Innanzitutto, assicurati di essere loggato al portale Lemon come amministratore del condominio. Se non lo sei, procedi a effettuare l'accesso e assicurati di avere le autorizzazioni necessarie per utilizzare il pulsante PLUM.
+
+Se hai già provato a cliccare sul pulsante ""PLUM"" senza che apparia, controlla se ci sono eventuali errori o avvertenze nel pannello di controllo del tuo account. Potresti dover effettuare alcune configurazioni aggiuntive per attivare il pulsante.
+
+Inoltre, assicurati di aver installato l'applicazione Plum e che sia configurata correttamente sul tuo dispositivo. Se non lo hai ancora fatto, puoi seguire le istruzioni del manuale d'istallazione o contattare il supporto tecnico di Lemon per assistenza.
+
+Se non riesci a trovare informazioni su come attivare il pulsante PLUM, potresti dover consultare il manuale d'istruzione del portale o contattare l'amministrazione del condominio per ulteriore assistenza.
+
+In generale, se il pulsante ""PLUM"" non appare, è possibile che ci sia un problema di configurazione o di accesso. Se sei incerto su come procedere, ti consiglio di consultare le risorse ufficiali del portale Lemon o contattare il supporto tecnico per ulteriore assistenza."
+16,Dove vado per scaricare i dati da Lemon su PLUM?,"Accedi a www.plumpost.it con le credenziali, poi nella sezione SPEDIZIONI premi sul cilindro celeste. Questo consente di scaricare i dati trasmessi da Lemon, inclusi i bollettini postali generati.",COME GENERARE I BOLLETTINI POSTALI TD 896 O TD 123,"{""name"":""query_vector_db"",""parameters\"":{\""query\"":\""dati da Lemon su PLUM\"",\""limit\"":0}}"
+17,Serve salvare ogni configurazione che inserisco?,"Sì, dopo ogni configurazione (email, buste, etichette, mittente, ecc.) è necessario premere il pulsante SALVA o il simbolo del dischetto per memorizzare i dati inseriti, altrimenti le impostazioni non verranno applicate.",COME CONFIGUARE LE EMAIL E LA PEC,"{""name"": ""save_config"", ""parameters"": {""config_name"": ""default""}}"
+18,Il campo 'Mail inoltro per conoscenza' e' obbligatorio?,"No, il campo 'Mail inoltro per conoscenza' è facoltativo e va compilato solo se si attiva la spunta 'su servizio turboSMTP desidero ricevere la copia email per conoscenza'. In tal caso bisogna indicare un indirizzo email valido dove ricevere le copie.",COME CONFIGUARE LE EMAIL E LA PEC,"Il campo ""Mail inoltro per conoscenza"" è obbligatorio nel sistema Plum. È necessario inserire questo campo quando si crea un nuovo documento o email per garantire che le comunicazioni siano tracciate e possibili da seguire."

@@ -1,6 +1,7 @@
 from datetime import datetime
-from sqlalchemy import UUID, Column, DateTime, Integer, Text
 from uuid import uuid4
+
+from sqlalchemy import UUID, Column, DateTime, Integer, Text
 
 from plum_chatbot.datasources.postgres_datasource import BaseTable
 

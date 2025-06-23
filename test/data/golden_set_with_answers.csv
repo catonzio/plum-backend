@@ -1,0 +1,128 @@
+id,question,answer,answers
+1,Posso conoscere l'esito delle email inviate?,"Si certamente!. Per inviare le email massime a diversi soggetti la procedura utilizza turboSMTP attraverso il quale l'utente è in grado di sapere se la singola email sia stata inviata, consegnata, aperta, respinta oppure se è in coda. Dal barra del menù l'utente può premere REPORT INVVI per conoscere l'esito di ciascuna email.","Per conoscere l'esito delle email inviate tramite il portale Plum, è necessario configurare correttamente l'email e la PEC. 
+
+In particolare, per ricevere notifiche dell'invio delle email, è necessario:
+
+1.  Configurare correttamente le impostazioni di email e PEC nel sistema Plum;
+2.  Assicurarsi che il mittente abbia i permessi necessari per inviare email;
+3.  Verificare che l'email sia stata inviata con successo.
+
+Inoltre, è possibile utilizzare la funzionalità delle bollette digitali e dei MAV per ricevere notifiche dell'invio delle email. 
+
+Per ulteriori informazioni sulle impostazioni di email e PEC, si consiglia di consultare il documento ""1. COME CONFIGURARE L'EMAIL E LA PEC.pdf""."
+2,Come posso reinviare un'email ad un soggetto?,Premendo sul REPORT INVII e richiamando la spedizione attraverso il filtri presenti nella finestra stessa è possibile inserire/modificare l'email del destinatario e procedere ad un nuovo invio. In questo caso la procedura NON utilizzerà turboSMPT ma invierà l'email dell'indirizzo email dell'amministratore.,"Per reinviare un email ad un soggetto, puoi seguire questi passaggi:
+
+1. Accedi al portale Plum e seleziona l'opzione ""Email"" nel menu principale.
+2. Seleziona la email che desideri reinviare e clicca su ""Reinvia"".
+3. Inserisci l'indirizzo email del destinatario nell'campo ""Destinatario"".
+4. Se necessario, puoi aggiungere un oggetto alla email selezionando l'opzione ""Oggetto"" nel menu a discesa.
+5. Clicca su ""Invia"" per inviare la email.
+
+In alternativa, puoi anche utilizzare l'opzione ""Reinvia email"" presente nella sezione ""Utenti"" del portale Plum. Per farlo:
+
+1. Accedi al portale Plum e seleziona l'opzione ""Utenti"" nel menu principale.
+2. Seleziona il utente che desideri inviare l'email a.
+3. Clicca su ""Reinvia email"".
+4. Inserisci l'indirizzo email del destinatario nell'campo ""Destinatario"".
+5. Se necessario, puoi aggiungere un oggetto alla email selezionando l'opzione ""Oggetto"" nel menu a discesa.
+6. Clicca su ""Invia"" per inviare la email.
+
+Spero che questo ti sia stato utile! Se hai altre domande o bisogno di ulteriore assistenza, non esitare a chiedere."
+3,Come posso vedere eventuali allegati all'email già inviata?,Premendo sul REPORT INVI  INVII e richiamando la spedizione attraverso il filtri presenti nella finestra la procedura visualizza tutte le email richieste. Premendo il simbolo dell'attach è possibile visualizzare gli allegati trasmessi con l'email.,"Per vedere eventuali allegati all'email già inviata sul portale Plum, segui questi passaggi:
+
+1. Accedi al tuo account di amministratore del condominio.
+2. Seleziona l'email che hai inviato e clicca sul pulsante ""Allegati"".
+3. Questo ti porterà alla pagina degli allegati dell'email, dove potrai visualizzare tutti i file allegati.
+
+Inoltre, se desideri configurare la comunicazione con il tuo server email per ricevere gli allegati automaticamente, segui questi passaggi:
+
+1. Accedi al tuo account di amministratore del condominio.
+2. Seleziona l'email che hai inviato e clicca sul pulsante ""Configurazione"".
+3. Nella sezione ""Allegati"", seleziona l'opzione ""Ricevere allegati automaticamente"" e segui le istruzioni per configurare il tuo server email.
+
+Nota: assicurati di aver configurato correttamente la tua email e PEC sul portale Plum per ricevere gli allegati in modo efficace."
+4,Posso inserire la firma e il logo del mio studio?,Dal menù principale in altro l'utente deve premere UTENTI e poi IL MIO PROFILO. All'intero della finestra è possibile allegare il file in formato JPEG oppure PNG.,"Purtroppo non ho trovato informazioni specifiche su come inserire la firma e il logo del tuo studio nel portale Plum. Tuttavia, posso suggerirti di controllare le impostazioni personalizzazioni del tuo studio all'interno del portale.
+
+Per farlo, segui questi passaggi:
+
+1. Accedi al tuo studio all'interno del portale Plum.
+2. Seleziona l'opzione ""Personalizzazione"" o ""Impostazioni"" a seconda della disposizione del sito web.
+3. Nell'area di personalizzazione, cerca la sezione dedicata alle ""Informazioni del studio"" o ""Dati di identificazione"".
+4. Inserisci le informazioni relative alla tua firma e al tuo logo, ad esempio il nome del tuo studio, l'indirizzo, il numero di telefono e l'e-mail.
+5. Assicurati di selezionare l'opzione per inserire la foto del tuo studio e la sua firma.
+
+Se non riesci a trovare queste opzioni o se non sono chiari i passaggi da seguire, ti consiglio di contattare il supporto tecnico del portale Plum per ulteriore assistenza."
+5,Posso impostare più email e pec dello studio in modo da poter decidere da quali di esse inviare la corrispondenza elettronica?,Certamente si!. La piattaforma è progetta per inserire tutte le email e pec dello studio. In fase di invio massimo l'utente può selezionare l' email e la pec di partenza.,"Per impostare più email e PEC dello studio, puoi seguire questi passaggi:
+
+1. Accedi al portale Plum come amministratore del condominio.
+2. Seleziona l'opzione ""Impostazioni"" nel menu superiore destro.
+3. Nella sezione ""Email e PEC"", seleziona l'opzione ""Aggiungi email/Pec"".
+4. Inserisci le informazioni relative all'email o PEC che desideri utilizzare, come ad esempio il nome dell'email o Pec, l'indirizzo email o la password.
+5. Ripeti questo processo per ogni email e PEC che desideri impostare.
+6. Una volta completato, clicca su ""Salva"" per salvare le tue impostazioni.
+
+Inoltre, è importante notare che per utilizzare più email e PEC, è necessario disattivare l'opzione ""Unica email/Pec"" nella sezione ""Impostazioni"". Per farlo, segui questi passaggi:
+
+1. Accedi al portale Plum come amministratore del condominio.
+2. Seleziona l'opzione ""Impostazioni"" nel menu superiore destro.
+3. Nella sezione ""Email e Pec"", seleziona l'opzione ""Unica email/Pec"".
+4. Attiva l'opzione ""Disattivare unica email/Pec"".
+5. Salva le tue impostazioni.
+
+In questo modo, potrai utilizzare più email e PEC per la comunicazione con gli utenti del condominio."
+6,Dove configuro le email e le pec?,Nel  menù principale è presente la sezione CONFIGURAZIONI à Parametri email e pec. L'utente deve inserire i dati delle proprie email e pec con relativa password. Alcuni provider di posta richiedono la generazione di una password differente da quella utilizzata per accedere attraverso il browser. Per la generazione della password (vedi file allegato),"Per configurare le email e la PEC sul portale Plum, segui questi passaggi:
+
+1. Accedi al tuo account sul portale Plum.
+2. Vai alla sezione ""Impostazioni"" (solitamente rappresentata da un'icona di piccola chiave o da un pulsante con il testo ""Impostazioni"").
+3. Nella sezione ""Impostazioni"", cerca la voce ""Corrispondenza elettronica"" o ""Email"".
+4. In questo menu, seleziona l'opzione ""Configurazione email"".
+5. Istruzioni specifiche per la configurazione dell'email variano a seconda del tipo di servizio utilizzato (ad esempio, Gmail, Outlook, ecc.). Segui le istruzioni fornite dal provider di posta elettronica selezionato.
+6. Per la PEC, segui questi passaggi:
+	* Vai alla sezione ""Impostazioni"" e cerca la voce ""PEC"".
+	* Seleziona l'opzione ""Configurazione PEC"".
+	* Segui le istruzioni fornite per configurare la tua PEC sul portale Plum.
+
+Ricorda di registrare la tua PEC con il provider di posta elettronica ufficiale (ad esempio, Poste Italiane) per poterla utilizzare correttamente sul portale Plum."
+7,Cosa sono i bollettini digitali e come acquistarli?,"La procedura non ha costi di attivazione e quando vengono generati i documenti di pagamento (avvisi, bollettini postali, bollettini freccia, mav) viene addebitato un documento digitale per ogni documento generato. Nel caso in cui non sia presente un documento di pagamento ma un documento generico (convocazione, verbale, estratto  conto, sollecito, o documenti vari) la procedura addebiterà un documento digitale per ciascun destinatario.   Per comprare i bollettini digitaliè sufficiente premere ORDINI e poi sul simbolo “+”. Dopo aver compilato l'ordine la procedura genera un bollettino 896 per il relativo pagamento. La procedura provvederà ad acquisire il pagamento ed accreditare i bollettini. L'utente potrà verificare il relativo accredito dalla finestra estratto conto oppure potrà consultare i bollettini residui nella finestra “spedizioni”.","Gli utenti possono acquistare i bollettini digitali tramite il portale Plum, che è il sistema di comunicazione ufficiale del gestionale Lemon. Per farlo, devono seguire questi passaggi:
+
+1. Accedere al portale Plum e registrarsi se non sono già iscritti.
+2. Vai alla sezione ""Documenti"" e seleziona la voce ""Bollettini digitali"".
+3. Scegli il tipo di bollettino desiderato (ad esempio, bollettino TD 896 o TD 123) e clicca su ""Acquista"".
+4. Segui le istruzioni per completare l'ordine e pagare il bollettino.
+5. Riceverai un email con la conferma dell'acquisto e i dettagli del bollettino acquistato.
+
+Inoltre, gli utenti possono anche consultare i documenti disponibili sul portale Plum per conoscere meglio come generare i bollettini digitali e come utilizzarli."
+8,Come posso impostare i parametri dell'avviso di pagamento?,Accedendo al menù Configurazionià Parametri avviso l'utente può modificare le coordinate del margine superiore sinistro.,"Per impostare i parametri dell'avviso di pagamento sul portale Plum, puoi seguire questi passaggi:
+
+1. Accedi al pannello di amministrazione del condominio e seleziona la sezione ""Avvisi e comunicazioni"".
+2. Clicca su ""Gestione avvisi"" e poi su ""Nuovo avviso"".
+3. Scegli il tipo di avviso ""Pagamento"" e impostare i parametri desiderati, come ad esempio:
+	* Data di scadenza del pagamento
+	* Importo dovuto
+	* Metodo di pagamento accettato
+	* Contatto per le domande o le richieste di informazioni
+4. Clicca su ""Salva"" per salvare i parametri dell'avviso.
+5. Se necessario, puoi anche impostare le preferenze per la notifica degli avvisi di pagamento, come ad esempio se desideri che vengano inviate via email o SMS.
+
+Inoltre, potresti voler controllare i documenti relativi all'avviso di pagamento, come ad esempio il PDF ""11. COME GENERARE I MAV.pdf"" o il PDF ""10. COME GENERARE I BOLLETTINI TD 896 O TD 123.pdf"", per avere ulteriori informazioni sui parametri e sulle procedure per l'invio degli avvisi di pagamento.
+
+Spero che questa informazione ti sia stata utile! Se hai altre domande, non esitare a chiedere."
+9, Come posso inserire il testo dell'email per l'invio massivo?,Accedendo al menù Configurazionià Testi personalizzati l'utente può predisporre diversi testi da utilizzare in fase di invio. Premendo il simbolo “+” viene aperta una finestra all'interno della quale è possibile indicare se il testo si riferisce ad all'email o alla pec. Dopo aver inserire il titolo può inserire il testo che verrà aggiunto nel corpo dell'email /pec. E' importante sapere che i testi delle email e delle pec sono gestiti separatamente  e quindi si dovrà creare il testo per l'email ed un altro per la pec.,"{""name"": ""query_vector_db"", ""parameters"": {""query"": ""testo dell\'email per l\'invio massivo"", ""limit"": null}}"
+10,Cos'è l'email evoluta?,L'email evoluta rappresenta un nuovo strumento per inviare le comunicazioni formali. L'utente può inviare l'email prima di una spedizione cartacea. Il destinatario può ricevere l'email a scaricarne il relativo contenuto entro le 48 ore (o in un tempo differente se concordato con il vettore postale). La piattaforma rileva data ed ora in cui viene scaricato il file. Nel caso in cui ciò non avvenga la procedura trasformerà in automatico le email non “aperte” in corrispondenza cartacea in base a quanto indicato dall'amministratore prima dell'invio delle email.,"L'email evoluta è un tipo di email che offre una maggiore flessibilità e personalizzazione rispetto all'email tradizionale. Con l'email evoluta, gli utenti possono creare messaggi più complessi e dinamici, con la possibilità di aggiungere immagini, video e altri elementi multimediali.
+
+L'email evoluta può essere utilizzata per vari scopi, come ad esempio:
+
+* Invio di notifiche e avvisi
+* Condivisione di documenti e file
+* Creazione di campagne di marketing e pubblicità
+* Gestione delle relazioni con i clienti e gli utenti
+
+Per utilizzare l'email evoluta nel portale Plum, è necessario seguire alcuni passaggi:
+
+1. Accedere al portale Plum e selezionare l'opzione ""Email"" nel menu principale.
+2. Selezionare l'opzione ""Evoluta"" come tipo di email.
+3. Inserire i dettagli del mittente e del destinatario, comprese le coordinate della busta da lettere e i dati del mittente.
+4. Aggiungere il corpo dell'email e gli elementi multimediali desiderati.
+5. Salvare e inviare l'email.
+
+È importante notare che l'email evoluta richiede una configurazione più complessa rispetto all'email tradizionale, ma offre molte possibilità di personalizzazione e flessibilità."

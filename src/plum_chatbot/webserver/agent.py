@@ -1,13 +1,14 @@
 import logging
 from typing import Annotated
-from fastapi import APIRouter, HTTPException, Depends
+
+from fastapi import APIRouter, Depends, HTTPException
 
 from plum_chatbot.agents.agents import invoke_chatbot
 from plum_chatbot.configs.settings import Settings
+from plum_chatbot.datasources.models.chat_message import ChatMessage as DBChatMessage
 from plum_chatbot.datasources.postgres_datasource import PostgresDatasource
 from plum_chatbot.di_containers.datasources_containers import Container
 from plum_chatbot.schemas.schema import ChatMessage, UserInput
-from plum_chatbot.datasources.models.chat_message import ChatMessage as DBChatMessage
 
 router = APIRouter(prefix="/agent", tags=["agent"])
 logger = logging.getLogger(__name__)

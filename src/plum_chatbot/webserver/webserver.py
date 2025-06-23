@@ -1,13 +1,14 @@
 import logging
 from typing import Annotated
-from fastapi import APIRouter, Depends, FastAPI
+
 import uvicorn
+from fastapi import APIRouter, Depends, FastAPI
 
 from plum_chatbot.datasources.qdrant_datasource import QdrantDatasource
-from plum_chatbot.ui.main import mount_gradio
-from plum_chatbot.webserver.lifespan import lifespan
 from plum_chatbot.di_containers.datasources_containers import Container
+from plum_chatbot.ui.main import mount_gradio
 from plum_chatbot.webserver.agent import router as agent_router
+from plum_chatbot.webserver.lifespan import lifespan
 
 logger = logging.getLogger(__name__)
 

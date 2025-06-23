@@ -1,6 +1,7 @@
+import logging
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
-import logging
+
 from fastapi import FastAPI
 
 from plum_chatbot.datasources.base_datasource import BaseDatasource

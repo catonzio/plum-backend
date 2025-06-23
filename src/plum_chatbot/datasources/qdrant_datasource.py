@@ -1,9 +1,8 @@
-from plum_chatbot.datasources.base_datasource import BaseDatasource
-
+from langchain_ollama import OllamaEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
-from langchain_ollama import OllamaEmbeddings
 
+from plum_chatbot.datasources.base_datasource import BaseDatasource
 from plum_chatbot.datasources.parameters import QdrantParameters
 
 
