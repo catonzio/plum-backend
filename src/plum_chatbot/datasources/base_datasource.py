@@ -16,7 +16,7 @@ class BaseDatasource(ABC):
         self.name = name
         # self.config = config
 
-    def setup(self):
+    async def setup(self):
         """
         Method to initialize the data source.
         Should be implemented by subclasses.
@@ -25,7 +25,7 @@ class BaseDatasource(ABC):
         """
         raise NotImplementedError("Subclasses must implement this method.")
 
-    def shutdown(self):
+    async def shutdown(self):
         """
         Method to clean up the data source.
         Should be implemented by subclasses.

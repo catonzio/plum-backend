@@ -19,6 +19,7 @@ dependencies = [
     "langgraph>=0.4.7",
     "langgraph-checkpoint-postgres>=2.0.21",
     "ollama>=0.4.9",
+    "pre-commit>=4.2.0",
     "psycopg[binary,pool]>=3.2.9",
     "pypdf>=5.5.0",
     "python-dotenv>=1.1.0",

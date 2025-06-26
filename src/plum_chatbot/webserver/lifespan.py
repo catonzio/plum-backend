@@ -1,4 +1,5 @@
 import logging
+from asyncio import gather
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
@@ -17,38 +18,52 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     Initializes or resets the vars dictionary and logs startup/shutdown events.
     """
     try:
-        await up(app)  # Perform any asynchronous startup tasks
+        await setup(app)  # Perform any asynchronous startup tasks
         logger.info("Starting up the webserver...")
         yield
     except Exception as e:
         logger.error(f"Error during startup: {e}")
         raise
     finally:
-        await down(app)
+        await shutdown(app)
         logger.info("Shutting down the webserver...")
 
 
-async def up(app: FastAPI):
+async def setup(app: FastAPI):
     """
     Placeholder for any asynchronous startup tasks.
     This can be used to initialize resources or perform checks.
     """
     logger.info("Initializing dependencies...")
-    container.init_resources()
-    for k, v in Container.providers.items():
-        provider = v()
-        if isinstance(provider, BaseDatasource):
+    try:
+        container.init_resources()
+        providers = [
             provider.setup()
-        logger.info(f"Dependency {k} initialized with {v}")
-    # mount_gradio(app)
+            for provider in Container.providers.values()
+            if isinstance(provider(), BaseDatasource)
+        ]
+        await gather(*providers)
+    except Exception as e:
+        logger.error(f"Error during startup: {e}", exc_info=True)
+        raise
+    logger.info("All dependencies initialized successfully.")
 
 
-async def down(app: FastAPI):
+async def shutdown(app: FastAPI):
     """
     Placeholder for any asynchronous shutdown tasks.
     This can be used to clean up resources or perform final checks.
     """
-    for k, v in Container.providers.items():
-        provider = v()
-        if isinstance(provider, BaseDatasource):
+    logger.info("Cleaning up dependencies...")
+    try:
+        providers = [
             provider.shutdown()
+            for provider in Container.providers.values()
+            if isinstance(provider(), BaseDatasource)
+        ]
+        await gather(*providers)
+        container.shutdown_resources()
+    except Exception as e:
+        logger.error(f"Error during shutdown: {e}", exc_info=True)
+        raise
+    logger.info("All dependencies cleaned up successfully.")

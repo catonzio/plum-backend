@@ -28,7 +28,7 @@ class QdrantDatasource(BaseDatasource):
         self.api_key = config.api_key
         self.collection_name = config.collection_name
 
-    def setup(self):
+    async def setup(self):
         """
         Initialize the Qdrant client and ensure the collection exists.
         """
@@ -46,7 +46,7 @@ class QdrantDatasource(BaseDatasource):
             embedding=self.embeddings,
         )
 
-    def shutdown(self):
+    async def shutdown(self):
         """
         Clean up the Qdrant client.
         """

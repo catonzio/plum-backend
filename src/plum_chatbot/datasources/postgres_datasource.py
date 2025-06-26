@@ -23,7 +23,7 @@ class PostgresDatasource(BaseDatasource):
         super().__init__(name="PostgresDatasource")
         self.db_url = config.postgres_url
 
-    def setup(self):
+    async def setup(self):
         """
         Initialize the PostgreSQL client and ensure the connection is established.
         """
@@ -31,7 +31,7 @@ class PostgresDatasource(BaseDatasource):
         self.session: Session = sessionmaker(bind=self.engine)()
         BaseTable.metadata.create_all(bind=self.engine)
 
-    def shutdown(self):
+    async def shutdown(self):
         """
         Clean up the PostgreSQL client.
         """
