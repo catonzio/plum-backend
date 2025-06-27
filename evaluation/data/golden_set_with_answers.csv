@@ -1,5 +1,5 @@
 id,question,answer,answers
-1,Posso conoscere l'esito delle email inviate?,"Si certamente!. Per inviare le email massime a diversi soggetti la procedura utilizza turboSMTP attraverso il quale l'utente è in grado di sapere se la singola email sia stata inviata, consegnata, aperta, respinta oppure se è in coda. Dal barra del menù l'utente può premere REPORT INVVI per conoscere l'esito di ciascuna email.","Per conoscere l'esito delle email inviate tramite il portale Plum, è necessario configurare correttamente l'email e la PEC. 
+1,Posso conoscere l'esito delle email inviate?,"Si certamente!. Per inviare le email massime a diversi soggetti la procedura utilizza turboSMTP attraverso il quale l'utente è in grado di sapere se la singola email sia stata inviata, consegnata, aperta, respinta oppure se è in coda. Dal barra del menù l'utente può premere REPORT INVVI per conoscere l'esito di ciascuna email.","Per conoscere l'esito delle email inviate tramite il portale Plum, è necessario configurare correttamente l'email e la PEC.
 
 In particolare, per ricevere notifiche dell'invio delle email, è necessario:
 
@@ -7,7 +7,7 @@ In particolare, per ricevere notifiche dell'invio delle email, è necessario:
 2.  Assicurarsi che il mittente abbia i permessi necessari per inviare email;
 3.  Verificare che l'email sia stata inviata con successo.
 
-Inoltre, è possibile utilizzare la funzionalità delle bollette digitali e dei MAV per ricevere notifiche dell'invio delle email. 
+Inoltre, è possibile utilizzare la funzionalità delle bollette digitali e dei MAV per ricevere notifiche dell'invio delle email.
 
 Per ulteriori informazioni sulle impostazioni di email e PEC, si consiglia di consultare il documento ""1. COME CONFIGURARE L'EMAIL E LA PEC.pdf""."
 2,Come posso reinviare un'email ad un soggetto?,Premendo sul REPORT INVII e richiamando la spedizione attraverso il filtri presenti nella finestra stessa è possibile inserire/modificare l'email del destinatario e procedere ad un nuovo invio. In questo caso la procedura NON utilizzerà turboSMPT ma invierà l'email dell'indirizzo email dell'amministratore.,"Per reinviare un email ad un soggetto, puoi seguire questi passaggi:

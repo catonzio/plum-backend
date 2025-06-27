@@ -1,3 +1,4 @@
+import asyncio
 import logging
 
 import gradio as gr
@@ -74,7 +75,7 @@ def gradio_app() -> gr.Blocks:
             fn=ask_chatbot,
             chatbot=chatbot,
             stop_btn=True,
-            show_progress=True,
+            show_progress="full",
             title="Plum Chatbot",
             type="messages",
             # description="Un'interfaccia chatbot semplice che utilizza Gradio.",
@@ -89,16 +90,26 @@ def gradio_app() -> gr.Blocks:
 
 
 if __name__ == "__main__":
-    try:
-        container.init_resources()
-        for k, v in Container.providers.items():
-            provider = v()
-            if isinstance(provider, BaseDatasource):
-                provider.setup()
-        gradio_app().launch(server_name="0.0.0.0", server_port=7860)
-    finally:
-        for k, v in Container.providers.items():
-            provider = v()
-            if isinstance(provider, BaseDatasource):
-                provider.shutdown()
-        container.shutdown_resources()
+
+    async def main():
+        try:
+            container.init_resources()
+            await asyncio.gather(
+                *[
+                    v().setup()
+                    for v in Container.providers.values()
+                    if isinstance(v(), BaseDatasource)
+                ]
+            )
+            gradio_app().launch(server_name="0.0.0.0", server_port=7860)
+        finally:
+            await asyncio.gather(
+                *[
+                    v().shutdown()
+                    for v in Container.providers.values()
+                    if isinstance(v(), BaseDatasource)
+                ]
+            )
+            container.shutdown_resources()
+
+    asyncio.run(main())

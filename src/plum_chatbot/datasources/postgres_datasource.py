@@ -1,8 +1,9 @@
 from sqlalchemy import Engine, create_engine, text
-from sqlalchemy.engine.cursor import CursorResult
+from sqlalchemy.engine.result import Result
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
+from sqlalchemy.schema import Table
 
 from plum_chatbot.datasources.base_datasource import BaseDatasource
 from plum_chatbot.datasources.parameters import PostgresParameters
@@ -38,7 +39,7 @@ class PostgresDatasource(BaseDatasource):
         self.session.close()
         self.engine.dispose()
 
-    def query(self, query: str, params: tuple = ()) -> CursorResult:
+    def query(self, query: str, params: tuple = (), **kwargs) -> Result:
         """
         Execute a query against the PostgreSQL database.
 
@@ -47,10 +48,10 @@ class PostgresDatasource(BaseDatasource):
         :return: Query results.
         """
         # with self.session.begin():
-        result = self.session.execute(text(query), params)
+        result: Result = self.session.execute(text(query), params)
         return result
 
-    def insert(self, table: BaseTable):  # type: ignore
+    def insert(self, table: Table):
         """
         Insert a new record into the specified table.
 

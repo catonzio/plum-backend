@@ -38,7 +38,7 @@ async def setup(app: FastAPI):
     try:
         container.init_resources()
         providers = [
-            provider.setup()
+            provider.setup()  # type: ignore
             for provider in Container.providers.values()
             if isinstance(provider(), BaseDatasource)
         ]
@@ -57,7 +57,7 @@ async def shutdown(app: FastAPI):
     logger.info("Cleaning up dependencies...")
     try:
         providers = [
-            provider.shutdown()
+            provider.shutdown()  # type: ignore
             for provider in Container.providers.values()
             if isinstance(provider(), BaseDatasource)
         ]

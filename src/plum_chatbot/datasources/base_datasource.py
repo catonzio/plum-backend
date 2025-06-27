@@ -34,23 +34,22 @@ class BaseDatasource(ABC):
         """
         raise NotImplementedError("Subclasses must implement this method.")
 
-    def query(self, query: str, limit: int = 10):
+    def query(self, query: str, **kwargs):
         """
         Method to query the data source.
         Should be implemented by subclasses.
 
         :param query: The query string to execute.
-        :param limit: The maximum number of results to return.
         :return: Query results.
         """
         raise NotImplementedError("Subclasses must implement this method.")
 
-    async def aquery(self, query: str, limit: int = 10):
+    async def aquery(self, query: str, **kwargs):
         """
         Method to asynchronously query the data source.
         Should be implemented by subclasses.
+
         :param query: The query string to execute.
-        :param limit: The maximum number of results to return.
         :return: Query results.
         """
         raise NotImplementedError("Subclasses must implement this method.")

@@ -22,8 +22,10 @@ dependencies = [
     "pre-commit>=4.2.0",
     "psycopg[binary,pool]>=3.2.9",
     "pypdf>=5.5.0",
+    "pytest>=8.4.1",
     "python-dotenv>=1.1.0",
     "qdrant-client>=1.14.2",
+    "ruff>=0.11.11",
     "sqlalchemy>=2.0.41",
 ]
 

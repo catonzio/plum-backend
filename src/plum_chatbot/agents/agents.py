@@ -56,14 +56,14 @@ def get_all_agent_info() -> list[AgentInfo]:
 
 async def _handle_input(
     user_input: UserInput, agent: Pregel
-) -> tuple[dict[str, Any], UUID, UUID]:
+) -> tuple[dict[str, Any], str, str]:
     """
     Parse user input and handle any required interrupt resumption.
     Returns kwargs for agent invocation and the run_id.
     """
-    run_id = uuid4()
-    thread_id = user_input.thread_id or str(uuid4())
-    user_id = user_input.user_id or str(uuid4())
+    run_id: UUID = uuid4()
+    thread_id: str = user_input.thread_id or str(uuid4())
+    user_id: str = user_input.user_id or str(uuid4())
 
     configurable = {
         "thread_id": thread_id,
@@ -102,7 +102,7 @@ async def _handle_input(
         "config": config,
     }
 
-    return kwargs, run_id, thread_id
+    return kwargs, str(run_id), thread_id
 
 
 async def invoke_chatbot(user_input: UserInput, agent_id: str) -> ChatMessage:

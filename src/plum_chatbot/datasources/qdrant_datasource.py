@@ -53,14 +53,14 @@ class QdrantDatasource(BaseDatasource):
         self.vector_store._client.close()
         self.client.close()
 
-    async def aquery(self, query: str, limit: int = 10):
+    async def aquery(self, query: str, limit: int = 10, **kwargs):
         results = await self.vector_store.asimilarity_search(
             query=query,
             limit=limit,
         )
         return results
 
-    def query(self, query: str, limit: int = 10):
+    def query(self, query: str, limit: int = 10, **kwargs):
         results = self.vector_store.similarity_search(
             query=query,
             limit=limit,

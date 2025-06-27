@@ -12,8 +12,8 @@ class Agent(BaseModel):
     name: str
     description: str
 
-    graph: Pregel = Field(default=None, exclude=True)
-    llm: BaseChatModel = Field(default=None, exclude=True)
+    graph: Pregel = Field(exclude=True)
+    llm: BaseChatModel = Field(exclude=True)
     tools: list[BaseTool] = Field(default_factory=list, exclude=True)
     prompt: str | None = Field(default=None, exclude=True)
 

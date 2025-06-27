@@ -1,5 +1,4 @@
 from langchain.chat_models import init_chat_model
-
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
 
@@ -9,7 +8,6 @@ from plum_chatbot.schemas.schema import Agent
 
 class RagAgent(Agent):
     def __init__(self, name: str = "rag_agent", description: str = ""):
-        super().__init__(name=name, description=description)
         self.prompt = """
 Sei un assistente esperto del portale Plum, il sistema di comunicazione ufficiale del gestionale Lemon, progettato per supportare gli amministratori di condominio.
 
@@ -28,6 +26,14 @@ Se il problema riguarda configurazioni tecniche (email, PEC, invio documenti, pa
             """
         # Initialize the RAG agent
         self._initialize_rag_agent()
+        super().__init__(
+            name=name,
+            description=description,
+            graph=self.graph,
+            llm=self.llm,
+            tools=self.tools,
+            prompt=self.prompt,
+        )
 
     def _initialize_rag_agent(self):
         self.llm = init_chat_model(
