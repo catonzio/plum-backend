@@ -1,3 +1,6 @@
+import logging
+from uuid import UUID
+
 from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.engine.result import Result
 from sqlalchemy.ext.declarative import declarative_base
@@ -19,10 +22,13 @@ class PostgresDatasource(BaseDatasource):
     engine: Engine
     session: Session
     db_url: str
+    logger: logging.Logger
 
     def __init__(self, config: PostgresParameters):
         super().__init__(name="PostgresDatasource")
         self.db_url = config.postgres_url
+
+        self.logger = logging.getLogger(__name__)
 
     async def setup(self):
         """
@@ -31,6 +37,7 @@ class PostgresDatasource(BaseDatasource):
         self.engine = create_engine(self.db_url)
         self.session: Session = sessionmaker(bind=self.engine)()
         BaseTable.metadata.create_all(bind=self.engine)
+        self.logger.info("PostgreSQL client initialized successfully.")
 
     async def shutdown(self):
         """
@@ -38,6 +45,7 @@ class PostgresDatasource(BaseDatasource):
         """
         self.session.close()
         self.engine.dispose()
+        self.logger.info("PostgreSQL client shut down successfully.")
 
     def query(self, query: str, params: tuple = (), **kwargs) -> Result:
         """
@@ -72,3 +80,37 @@ class PostgresDatasource(BaseDatasource):
         :return: List of all records in the table.
         """
         return self.session.query(table).all()
+
+    def find(self, table: BaseTable, id: UUID):  # type: ignore
+        """
+        Find a record by its ID in the specified table.
+
+        :param table: An instance of a SQLAlchemy model representing the table.
+        :param id: The ID of the record to find.
+        :return: The record if found, otherwise None.
+        """
+        return self.session.query(table).filter(table.id == id).first()
+
+    def update(self, record: BaseTable, **kwargs):  # type: ignore
+        """
+        Update a record in the specified table.
+
+        :param record: The record instance to update.
+        :param kwargs: Fields to update.
+        """
+        if record:
+            for key, value in kwargs.items():
+                setattr(record, key, value)
+            self.session.commit()
+        else:
+            raise ValueError("Cannot update a null record.")
+
+    def delete(self, record: BaseTable):  # type: ignore
+        """
+        Delete a record from the specified table.
+        """
+        if record:
+            self.session.delete(record)
+            self.session.commit()
+        else:
+            raise ValueError("Cannot delete a null record.")

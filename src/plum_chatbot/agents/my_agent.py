@@ -8,7 +8,7 @@ from plum_chatbot.schemas.schema import Agent
 
 class RagAgent(Agent):
     def __init__(self, name: str = "rag_agent", description: str = ""):
-        self.prompt = """
+        prompt = """
 Sei un assistente esperto del portale Plum, il sistema di comunicazione ufficiale del gestionale Lemon, progettato per supportare gli amministratori di condominio.
 
 Il tuo compito è aiutare gli utenti a risolvere problemi pratici, rispondere a domande frequenti e guidarli nell’uso del portale Plum.
@@ -24,33 +24,48 @@ Usa strumenti esterni solo se necessario e solo dopo aver analizzato tutte le in
 
 Se il problema riguarda configurazioni tecniche (email, PEC, invio documenti, pagamenti digitali, integrazioni), assicurati di spiegare ogni passaggio in modo semplice ma accurato.
             """
-        # Initialize the RAG agent
-        self._initialize_rag_agent()
-        super().__init__(
-            name=name,
-            description=description,
-            graph=self.graph,
-            llm=self.llm,
-            tools=self.tools,
-            prompt=self.prompt,
-        )
-
-    def _initialize_rag_agent(self):
-        self.llm = init_chat_model(
+        llm = init_chat_model(
             "llama3.2",  # qwen3:8b
             model_provider="ollama",
             base_url="host.docker.internal",
             temperature=0.5,
         )
 
-        self.tools = [query_vector_db]
+        tools = [query_vector_db]
 
-        self.graph = create_react_agent(
-            self.llm,
-            self.tools,
+        graph = create_react_agent(
+            llm,
+            tools,
             checkpointer=MemorySaver(),
-            prompt=self.prompt,
+            prompt=prompt,
         )
+        # Initialize the RAG agent
+        # _initialize_rag_agent(prompt)
+        super().__init__(
+            name=name,
+            description=description,
+            graph=graph,
+            llm=llm,
+            tools=tools,
+            prompt=prompt,
+        )
+
+    # def _initialize_rag_agent(self, prompt: str):
+    #     self.llm = init_chat_model(
+    #         "llama3.2",  # qwen3:8b
+    #         model_provider="ollama",
+    #         base_url="host.docker.internal",
+    #         temperature=0.5,
+    #     )
+
+    #     self.tools = [query_vector_db]
+
+    #     self.graph = create_react_agent(
+    #         self.llm,
+    #         self.tools,
+    #         checkpointer=MemorySaver(),
+    #         prompt=prompt,
+    #     )
 
 
 if __name__ == "__main__":

@@ -8,7 +8,11 @@ from plum_chatbot.agents.agents import invoke_chatbot
 from plum_chatbot.configs.settings import Settings
 from plum_chatbot.datasources.base_datasource import BaseDatasource
 from plum_chatbot.datasources.models.chat_message import ChatMessage as DBChatMessage
-from plum_chatbot.di_containers.datasources_containers import Container, container
+from plum_chatbot.di_containers.datasources_containers import (
+    Container,
+    container,
+    get_postgres_datasource,
+)
 from plum_chatbot.schemas.schema import ChatMessage, UserInput
 
 logger = logging.getLogger(__name__)
@@ -37,7 +41,7 @@ async def ask_chatbot(message, history, state):
         question=message,
         answer=response.content,
     )
-    Container.postgres().insert(db_message)
+    get_postgres_datasource().insert(db_message)
     # if not state("thread_id", None):
     #     logger.info("No thread_id found in state, setting it now.")
     #     state["thread_id"] = response.thread_id

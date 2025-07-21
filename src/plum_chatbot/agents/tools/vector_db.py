@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 
-from plum_chatbot.di_containers.datasources_containers import Container
+from plum_chatbot.di_containers.datasources_containers import get_qdrant_datasource
 
 
 @tool
@@ -17,7 +17,7 @@ def query_vector_db(query: str, limit: int | str | None = 5) -> tuple[str, list]
         tuple: A tuple containing the serialized results and the retrieved documents.
     """
     limit = int(limit or 5)
-    datasource = Container.qdrant()
+    datasource = get_qdrant_datasource()
     if datasource is None:
         raise ValueError("QdrantDatasource is not available in the container.")
 

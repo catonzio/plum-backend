@@ -31,3 +31,14 @@ class Container(containers.DeclarativeContainer):
 
 
 container = Container()
+
+
+# Wrapper functions to avoid FastAPI's automatic parameter detection
+def get_qdrant_datasource() -> QdrantDatasource:
+    """Get QdrantDatasource instance from container."""
+    return container.qdrant()
+
+
+def get_postgres_datasource() -> PostgresDatasource:
+    """Get PostgresDatasource instance from container."""
+    return container.postgres()

@@ -5,8 +5,8 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from plum_chatbot.datasources.base_datasource import BaseDatasource
-from plum_chatbot.di_containers.datasources_containers import Container, container
+from plum_chatbot.configs.logger import setup_global_logging
+from plum_chatbot.di_containers.datasources_containers import container
 
 logger = logging.getLogger(__name__)
 
@@ -34,15 +34,17 @@ async def setup(app: FastAPI):
     Placeholder for any asynchronous startup tasks.
     This can be used to initialize resources or perform checks.
     """
+    # Setup global logging configuration first
+    setup_global_logging()
     logger.info("Initializing dependencies...")
     try:
         container.init_resources()
-        providers = [
-            provider.setup()  # type: ignore
-            for provider in Container.providers.values()
-            if isinstance(provider(), BaseDatasource)
-        ]
-        await gather(*providers)
+
+        # Initialize datasources by calling setup on the singleton instances
+        qdrant_datasource = container.qdrant()
+        postgres_datasource = container.postgres()
+
+        await gather(qdrant_datasource.setup(), postgres_datasource.setup())
     except Exception as e:
         logger.error(f"Error during startup: {e}", exc_info=True)
         raise
@@ -56,12 +58,11 @@ async def shutdown(app: FastAPI):
     """
     logger.info("Cleaning up dependencies...")
     try:
-        providers = [
-            provider.shutdown()  # type: ignore
-            for provider in Container.providers.values()
-            if isinstance(provider(), BaseDatasource)
-        ]
-        await gather(*providers)
+        # Shutdown datasources by calling shutdown on the singleton instances
+        qdrant_datasource = container.qdrant()
+        postgres_datasource = container.postgres()
+
+        await gather(qdrant_datasource.shutdown(), postgres_datasource.shutdown())
         container.shutdown_resources()
     except Exception as e:
         logger.error(f"Error during shutdown: {e}", exc_info=True)

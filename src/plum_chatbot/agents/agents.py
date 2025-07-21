@@ -62,7 +62,7 @@ async def _handle_input(
     Returns kwargs for agent invocation and the run_id.
     """
     run_id: UUID = uuid4()
-    thread_id: str = user_input.thread_id or str(uuid4())
+    thread_id: str = user_input.chat_id or str(uuid4())
     user_id: str = user_input.user_id or str(uuid4())
 
     configurable = {

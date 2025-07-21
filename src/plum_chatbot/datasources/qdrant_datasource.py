@@ -1,3 +1,5 @@
+import logging
+
 from langchain_ollama import OllamaEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
@@ -19,6 +21,7 @@ class QdrantDatasource(BaseDatasource):
     qdrant_url: str
     api_key: str
     collection_name: str
+    logger: logging.Logger
 
     def __init__(self, config: QdrantParameters):
         super().__init__(name="QdrantDatasource")
@@ -27,6 +30,7 @@ class QdrantDatasource(BaseDatasource):
         self.qdrant_url = config.qdrant_url
         self.api_key = config.api_key
         self.collection_name = config.collection_name
+        self.logger = logging.getLogger(__name__)
 
     async def setup(self):
         """
@@ -45,6 +49,7 @@ class QdrantDatasource(BaseDatasource):
             collection_name=self.collection_name,
             embedding=self.embeddings,
         )
+        self.logger.info("Qdrant client initialized successfully.")
 
     async def shutdown(self):
         """
@@ -52,6 +57,7 @@ class QdrantDatasource(BaseDatasource):
         """
         self.vector_store._client.close()
         self.client.close()
+        self.logger.info("Qdrant client shut down successfully.")
 
     async def aquery(self, query: str, limit: int = 10, **kwargs):
         results = await self.vector_store.asimilarity_search(

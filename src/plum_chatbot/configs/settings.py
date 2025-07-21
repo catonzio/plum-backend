@@ -15,28 +15,32 @@ class Settings:
         return cls._instance
 
     def _init_env(self):
-        self.RUN_MODE = os.getenv("RUN_MODE")
+        self.RUN_MODE: str = os.getenv("RUN_MODE", "dev")
 
         # --- QDRANT --- #
-        self.QDRANT_READ_ONLY_API_KEY = os.getenv("QDRANT__SERVICE__READ_ONLY_API_KEY")
-        self.QDRANT_API_KEY = os.getenv("QDRANT__SERVICE__API_KEY")
-        self.QDRANT_HOST = "plum_database"  # os.getenv("QDRANT__SERVICE__HOST")
-        self.QDRANT_HTTP_PORT = os.getenv("QDRANT__SERVICE__HTTP_PORT")
-        self.QDRANT_COLLECTION_NAME = os.getenv("QDRANT__SERVICE__COLLECTION_NAME")
-        self.QDRANT_URL = f"http://{self.QDRANT_HOST}:{self.QDRANT_HTTP_PORT}"
+        self.QDRANT_READ_ONLY_API_KEY = os.getenv(
+            "QDRANT__SERVICE__READ_ONLY_API_KEY", ""
+        )
+        self.QDRANT_API_KEY: str = os.getenv("QDRANT__SERVICE__API_KEY", "")
+        self.QDRANT_HOST: str = "plum_database"  # os.getenv("QDRANT__SERVICE__HOST")
+        self.QDRANT_HTTP_PORT: str = os.getenv("QDRANT__SERVICE__HTTP_PORT", "")
+        self.QDRANT_COLLECTION_NAME: str = os.getenv(
+            "QDRANT__SERVICE__COLLECTION_NAME", ""
+        )
+        self.QDRANT_URL: str = f"http://{self.QDRANT_HOST}:{self.QDRANT_HTTP_PORT}"
 
         # --- POSTGRES --- #
-        self.POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
-        self.POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
-        self.POSTGRES_DB = os.getenv("POSTGRES_DB", "database")
-        self.POSTGRES_SERVER = os.getenv("POSTGRES_SERVER", "server")
-        self.POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
-        self.POSTGRES_URL = f"postgresql+psycopg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+        self.POSTGRES_USER: str = os.getenv("POSTGRES_USER", "postgres")
+        self.POSTGRES_PASSWORD: str = os.getenv("POSTGRES_PASSWORD", "password")
+        self.POSTGRES_DB: str = os.getenv("POSTGRES_DB", "database")
+        self.POSTGRES_SERVER: str = os.getenv("POSTGRES_SERVER", "server")
+        self.POSTGRES_PORT: str = os.getenv("POSTGRES_PORT", "5432")
+        self.POSTGRES_URL: str = f"postgresql+psycopg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
 
         # --- LANGSMITH --- #
-        self.LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY", "")
+        self.LANGSMITH_API_KEY: str = os.getenv("LANGSMITH_API_KEY", "")
 
-        self.DEFAULT_AGENT = os.getenv("DEFAULT_AGENT", "rag")
+        self.DEFAULT_AGENT: str = os.getenv("DEFAULT_AGENT", "rag")
 
     def reload(self):
         """Reload environment variables (if they have changed)."""

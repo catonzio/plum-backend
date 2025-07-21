@@ -66,7 +66,7 @@ class UserInput(BaseModel):
         default=OllamaModelName.OLLAMA_GENERIC,
         examples=[OllamaModelName.OLLAMA_GENERIC],
     )
-    thread_id: str | None = Field(
+    chat_id: str | None = Field(
         description="Thread ID to persist and continue a multi-turn conversation.",
         default=None,
         examples=["847c6285-8fc9-4560-a83f-4e6285809254"],
@@ -105,6 +105,11 @@ class ToolCall(TypedDict):
 class ChatMessage(BaseModel):
     """Message in a chat."""
 
+    message_id: str | None = Field(
+        description="Unique identifier for the message.",
+        default=None,
+        examples=["847c6285-8fc9-4560-a83f-4e6285809254"],
+    )
     type: Literal["human", "ai", "tool", "custom"] = Field(
         description="Role of the message.",
         examples=["human", "ai", "tool", "custom"],
