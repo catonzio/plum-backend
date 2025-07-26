@@ -9,9 +9,9 @@ class NewFeedbackInput(BaseModel):
         description="Indicates whether the feedback is positive or negative.",
         examples=[True, False],
     )
-    description: str = Field(
+    description: str | None = Field(
         description="Optional description of the feedback.",
-        default="",
+        default=None,
         examples=["The response was helpful and accurate."],
     )
 

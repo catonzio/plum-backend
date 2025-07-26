@@ -72,14 +72,43 @@ class PostgresDatasource(BaseDatasource):
             self.session.rollback()
             raise e
 
-    def all(self, table: BaseTable):  # type: ignore
+    def all(
+        self,
+        table: BaseTable,  # type: ignore
+        condition: str | None = None,
+        order_by=None,
+        limit=None,
+        offset=None,
+    ):
         """
-        Retrieve all records from the specified table.
+        Retrieve records from the specified table with optional filtering and sorting.
 
-        :param table: An instance of a SQLAlchemy model representing the table.
-        :return: List of all records in the table.
+        :param table: A SQLAlchemy model class representing the table.
+        :param condition: Optional SQLAlchemy filter condition (where clause).
+        :param order_by: Optional column or list of columns to order by.
+        :param limit: Optional limit on the number of records returned.
+        :param offset: Optional offset for pagination.
+        :return: List of records matching the criteria.
         """
-        return self.session.query(table).all()
+        query = self.session.query(table)
+
+        if condition is not None:
+            query = query.filter(text(condition))
+
+        if order_by is not None:
+            if isinstance(order_by, list):
+                for order_column in order_by:
+                    query = query.order_by(order_column)
+            else:
+                query = query.order_by(order_by)
+
+        if limit is not None:
+            query = query.limit(limit)
+
+        if offset is not None:
+            query = query.offset(offset)
+
+        return query.all()
 
     def find(self, table: BaseTable, id: UUID):  # type: ignore
         """
