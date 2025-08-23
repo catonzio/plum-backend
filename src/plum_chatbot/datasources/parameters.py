@@ -1,13 +1,13 @@
 class QdrantParameters:
     def __init__(
         self,
-        model_name: str = "llama3.2",
+        embedding_model_name: str = "multi-qa-mpnet-base-cos-v1",
         model_url: str = "host.docker.internal",
         qdrant_url: str = "http://localhost:6333",
         api_key: str = "",
         collection_name: str = "FAQ",
     ):
-        self.model_name = model_name
+        self.embedding_model_name = embedding_model_name
         self.model_url = model_url
         self.qdrant_url = qdrant_url
         self.api_key = api_key

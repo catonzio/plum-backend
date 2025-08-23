@@ -50,4 +50,4 @@ class Settings:
 # Usage:
 if __name__ == "__main__":
     settings = Settings()
-    print(settings.QDRANT_API_KEY)
+    print(settings.QDRANT_COLLECTION_NAME)

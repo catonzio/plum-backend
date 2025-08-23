@@ -17,7 +17,10 @@ from plum_chatbot.webserver.lifespan import lifespan
 logger = logging.getLogger(__name__)
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    root_path="/api",
+    lifespan=lifespan,
+)
 
 # Add CORS middleware
 app.add_middleware(
@@ -52,7 +55,7 @@ async def get_query(
     """
     return {
         "query": query,
-        "results": await datasource.aquery(query=query),
+        "results": datasource.query(query=query),
     }
 
 

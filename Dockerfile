@@ -13,4 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN uv sync
 
+RUN chmod +x ./entrypoint.sh
+CMD ["./entrypoint.sh"]
+
 # CMD ["uv", "run", "gradio", "src/plum-backend/main.py"]

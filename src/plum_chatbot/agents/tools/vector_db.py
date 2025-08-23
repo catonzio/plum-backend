@@ -1,10 +1,13 @@
 from langchain_core.tools import tool
 
+from plum_chatbot.datasources.models.qdrant_models import QdrantDocument
 from plum_chatbot.di_containers.datasources_containers import get_qdrant_datasource
 
 
 @tool
-def query_vector_db(query: str, limit: int | str | None = 5) -> tuple[str, list]:
+def query_vector_db(
+    query: str, limit: int | str | None = 1
+) -> str: # tuple[str, list[QdrantDocument]]:
     """
     Tool to query the PLUM vector database.
     This tool uses the QdrantDatasource to perform similarity searches.
@@ -12,7 +15,7 @@ def query_vector_db(query: str, limit: int | str | None = 5) -> tuple[str, list]
 
     Args:
         query (str): The query string to search for in the vector database.
-        limit (int, optional): The maximum number of results to return. Defaults to 5.
+        limit (int, optional): The maximum number of results to return. Defaults to 1.
     Returns:
         tuple: A tuple containing the serialized results and the retrieved documents.
     """
@@ -24,12 +27,11 @@ def query_vector_db(query: str, limit: int | str | None = 5) -> tuple[str, list]
     # def query_db(query: str, limit: int = 10):
     #     return datasource.query(query=query, limit=limit)
 
-    retrieved_docs = datasource.query(query=query, limit=limit)
+    retrieved_docs: list[QdrantDocument] = datasource.query(query=query, limit=limit)
     serialized = "\n\n".join(
-        (f"Source: {doc.metadata}\nContent: {doc.page_content}")
-        for doc in retrieved_docs
+        (f"Source: {doc.metadata.source}\nContent: {doc.content}") for doc in retrieved_docs
     )
-    return serialized, retrieved_docs
+    return serialized#, retrieved_docs
 
 
 if __name__ == "__main__":
@@ -38,12 +40,12 @@ if __name__ == "__main__":
     # This is just a placeholder to prevent import errors in some environments.
     # The tool will be used in the context of an agent or a chatbot.
     print("Vector DB tool is ready to be used.")
-
     # print(vector_db.name)
     # print(vector_db.description)
     # print(vector_db.args)
 
     async def test_vector_db():
+        await get_qdrant_datasource().setup()
         result = query_vector_db.invoke({"query": "come cambio la mail?", "limit": 5})
 
         # result = amultiply.invoke({"a": 3, "b": 4})

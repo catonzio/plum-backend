@@ -13,7 +13,7 @@ class Container(containers.DeclarativeContainer):
     qdrant = providers.Singleton(
         QdrantDatasource,
         config=QdrantParameters(
-            model_name="llama3.2",
+            embedding_model_name="multi-qa-mpnet-base-cos-v1",
             model_url="host.docker.internal",
             qdrant_url=settings.QDRANT_URL,
             api_key=settings.QDRANT_API_KEY,
