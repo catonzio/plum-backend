@@ -22,7 +22,7 @@ class Settings:
             "QDRANT__SERVICE__READ_ONLY_API_KEY", ""
         )
         self.QDRANT_API_KEY: str = os.getenv("QDRANT__SERVICE__API_KEY", "")
-        self.QDRANT_HOST: str = "plum_database"  # os.getenv("QDRANT__SERVICE__HOST")
+        self.QDRANT_HOST: str = "qdrant" # os.getenv("QDRANT__SERVICE__HOST")
         self.QDRANT_HTTP_PORT: str = os.getenv("QDRANT__SERVICE__HTTP_PORT", "")
         self.QDRANT_COLLECTION_NAME: str = os.getenv(
             "QDRANT__SERVICE__COLLECTION_NAME", ""
