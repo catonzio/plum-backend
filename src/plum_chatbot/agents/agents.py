@@ -7,19 +7,24 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.pregel import Pregel
 from langgraph.types import Command
 
-from plum_chatbot.agents.my_agent import RagAgent
+from plum_chatbot.agents.faq_agent import FaqAgent
 from plum_chatbot.schemas.schema import Agent, AgentInfo, ChatMessage, UserInput
 from plum_chatbot.utils.utils import langchain_to_chat_message, process_output
 
-DEFAULT_AGENT = "rag"
+DEFAULT_AGENT = "faq"
 
 
 agents: dict[str, Agent] = {
     # "chatbot": Agent(description="A simple chatbot.", graph=rag_agent),
-    "rag": RagAgent(
-        name="rag_agent",
-        description="A RAG agent that retrieves information from a vector database.",
+    # "rag": RagAgent(
+    #     name="rag_agent",
+    #     description="A RAG agent that retrieves information from a vector database.",
+    # )
+    "faq": FaqAgent(
+        name="faq_agent",
+        description="A FAQ agent that answers frequently asked questions about the Plum portal.",
     )
+    
     # "research-assistant": Agent(
     #     description="A research assistant with web search and calculator.",
     #     graph=research_assistant,

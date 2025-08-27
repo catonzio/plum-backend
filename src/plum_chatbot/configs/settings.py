@@ -40,7 +40,8 @@ class Settings:
         # --- LANGSMITH --- #
         self.LANGSMITH_API_KEY: str = os.getenv("LANGSMITH_API_KEY", "")
 
-        self.DEFAULT_AGENT: str = os.getenv("DEFAULT_AGENT", "rag")
+        # --- GENERIC --- #
+        self.DEFAULT_AGENT: str = os.getenv("DEFAULT_AGENT", "faq")
 
     def reload(self):
         """Reload environment variables (if they have changed)."""
